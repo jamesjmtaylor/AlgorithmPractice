@@ -10,12 +10,17 @@ namespace AlgorithmPractice
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
-
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            /*int[] array = new int[] { 4, 1, 3, 10, -4, 29,1 };
+            int[] helper = new int[array.Length];
+            Sorter.MergeSort(array, helper, 0, array.Length - 1);
+            Console.WriteLine($"Sorted: {String.Join(",", array)}");*/
+            int a = 2;
+            int b = 3;
+            Console.WriteLine($"{a} plus {b} is {BitOp.Add(a,b)}");
+            Console.WriteLine($"{a} negated is {BitOp.Negate(a)}");
+            Console.WriteLine($"Bit at position {a} of {b} is {BitOp.GetBitAt(a, b)}");
         }
+
+
     }
 }
