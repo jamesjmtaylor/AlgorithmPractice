@@ -20,7 +20,5 @@ namespace AlgorithmPractice
             Console.WriteLine($"{a} negated is {BitOp.Negate(a)}");
             Console.WriteLine($"Bit at position {a} of {b} is {BitOp.GetBitAt(a, b)}");
         }
-
-
-    }
+      }
 }
