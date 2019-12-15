@@ -67,4 +67,94 @@ namespace AlgorithmUnitTests
             Assert.AreEqual("10100", BitOp.GetBits(-11, 5));
         }
     }
+
+    [TestClass]
+    public class AddUnitTests
+    {
+        [TestMethod]
+        public void AddTwoPositivies()
+        {
+            Assert.AreEqual(14, BitOp.Add(2, 12));
+        }
+        [TestMethod]
+        public void AddLeftNegRightPos()
+        {
+            Assert.AreEqual(9, BitOp.Add(-3, 12));
+        }
+        [TestMethod]
+        public void AddRightPosLeftNeg()
+        {
+            Assert.AreEqual(-4, BitOp.Add(4, -8));
+        }
+        [TestMethod]
+        public void AddTwoNegatives()
+        {
+            Assert.AreEqual(-16, BitOp.Add(-9, -7));
+        }
+    }
+
+    [TestClass]
+    public class SubtractUnitTests
+    {
+        [TestMethod]
+        public void SubtractTwoPositives()
+        {
+            Assert.AreEqual(-9, BitOp.Subtract(2, 11));
+        }
+        [TestMethod]
+        public void SubtractNegLeftPositiveRight()
+        {
+            Assert.AreEqual(-13, BitOp.Subtract(-5, 8));
+        }
+        [TestMethod]
+        public void SubtractPositiveLeftNegativeRight()
+        {
+            Assert.AreEqual(8, BitOp.Subtract(7, -1));
+        }
+    }
+    [TestClass]
+    public class MultiplyUnitTests
+    {
+        [TestMethod]
+        public void MultiplyPositives()
+        {
+            Assert.AreEqual(32, BitOp.Multiply(4, 8));
+        }
+        [TestMethod]
+        public void MultiplyNegatives()
+        {
+            Assert.AreEqual(15, BitOp.Multiply(-5, -3));
+        }
+        [TestMethod]
+        public void MultiplyNegativeAndAPositive()
+        {
+            Assert.AreEqual(-7, BitOp.Multiply(7, -1));
+        }
+    }
+
+    [TestClass]
+    public class DivideUnitTests
+    {
+        [TestMethod]
+        public void DividePositives()
+        {
+            Assert.AreEqual(4, BitOp.Divide(8, 2));
+        }
+        [TestMethod]
+        public void DivideNegatives()
+        {
+            Assert.AreEqual(5, BitOp.Divide(-15, -3));
+        }
+        [TestMethod]
+        public void DivideNegativeAndAPositive()
+        {
+            Assert.AreEqual(-7, BitOp.Divide(7, -1));
+        }
+        [TestMethod]
+        public void DivideSmallerByBigger()
+        {
+            Assert.AreEqual(0.25, BitOp.Divide(4, 16));
+        }
+    }
+
 }

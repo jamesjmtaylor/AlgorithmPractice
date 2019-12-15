@@ -46,14 +46,26 @@ namespace AlgorithmPractice
             return Add(~a, 1);
         }
 
+        public static int Absolute(int a)
+        {
+            return (a > 0) ? a : Negate(a);
+        }
+
         public static int Subtract(int a, int b)
         {
-            return a;
+            return Add(a,Negate(b));
         }
 
         public static int Multiply(int a, int b)
         {
-            return a;
+            bool negativeMultiplication = a < 0;
+            int iterations = Absolute(a);
+            int sum = 0;
+            for (int i = 0; i < iterations; i = Add(i,1))
+            {
+                sum = (negativeMultiplication) ? Subtract(sum,b) : Add(sum, b);
+            }
+            return sum;
         }
 
         public static int Divide(int a, int b)
