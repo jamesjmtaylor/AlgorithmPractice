@@ -70,7 +70,18 @@ namespace AlgorithmPractice
 
         public static int Divide(int a, int b)
         {
-            return a;
+            bool negativeNumerator = a < 0;
+            bool negativeDenominator = b < 0;
+            int denominator = Absolute(b);
+            int remaining = Absolute(a);
+            int count = 0;
+            while (Subtract(remaining,denominator) >= 0)
+            {
+                remaining = Subtract(remaining, denominator);
+                count = Add(count, 1);
+            }
+            if (negativeDenominator ^ negativeNumerator) return Negate(count);
+            return count;
         }
     }
 }

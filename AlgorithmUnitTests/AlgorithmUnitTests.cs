@@ -151,9 +151,9 @@ namespace AlgorithmUnitTests
             Assert.AreEqual(-7, BitOp.Divide(7, -1));
         }
         [TestMethod]
-        public void DivideSmallerByBigger()
+        public void DivideHasRemainder()
         {
-            Assert.AreEqual(0.25, BitOp.Divide(4, 16));
+            Assert.AreEqual(3, BitOp.Divide(15, 4));
         }
     }
 
