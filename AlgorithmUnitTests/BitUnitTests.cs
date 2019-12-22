@@ -37,7 +37,7 @@ namespace AlgorithmUnitTests
             Assert.AreEqual(true, BitOp.GetBitAt(2, -3)); // ...100, bit 2 is false
         }
     }
-
+    
     [TestClass]
     public class GetBitsUnitTests
     {
@@ -45,6 +45,11 @@ namespace AlgorithmUnitTests
         public void GetBitsForThree()
         {
             Assert.AreEqual("0011", BitOp.GetBits(3,4));
+        }
+        [TestMethod]
+        public void GetBitsForBigNumber()
+        {
+            Assert.AreEqual("00001010000010110000110000001101", BitOp.GetBits(168496141, 32));
         }
         [TestMethod]
         public void GetBitsForEleven()
